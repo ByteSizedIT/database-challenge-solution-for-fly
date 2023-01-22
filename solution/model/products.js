@@ -45,12 +45,14 @@ function searchProducts(search_term) {
   return search_products.all("%" + search_term + "%");
 }
 
+// Added in unit price that wasn't saving into the db (passed in routes/add post request)
 const insert_product = db.prepare(/*sql*/ `
-  INSERT INTO products (name, quantity_per_unit, category_id)
+  INSERT INTO products (name, unit_price, quantity_per_unit, category_id)
   VALUES(
     $name,
     $quantity_per_unit,
-    $category_id
+    $category_id,
+    $unit_price
   )
   RETURNING id
 `);
