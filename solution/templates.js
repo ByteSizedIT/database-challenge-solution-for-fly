@@ -14,7 +14,7 @@ function Layout({ title, content }) {
           <nav>
             <ul>
               <li>
-                <a href="/">Products</a>
+                <a href="/">All Products</a>
                 <ul>
                   <li><a href="/search">Search</a></li>
                   <li><a href="/new">Add new</a></li>
