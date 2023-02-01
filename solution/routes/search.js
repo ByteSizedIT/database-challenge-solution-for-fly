@@ -3,7 +3,7 @@ const { Layout } = require("../templates.js");
 
 function get(req, res) {
   const { search = "" } = req.query;
-  let title = "Search";
+  let title = "Search:";
   let results;
   if (search) {
     results = searchProducts(search);
